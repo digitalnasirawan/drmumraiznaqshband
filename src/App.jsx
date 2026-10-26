@@ -11,6 +11,7 @@ import ServicesMasterPage from './pages/ServicesMasterPage';
 import RoboticKneeCategoryPage from './pages/RoboticKneeCategoryPage';
 import CoriRoboticKneePage from './pages/CoriRoboticKneePage';
 import TotalKneeReplacementPage from './pages/TotalKneeReplacementPage';
+import PartialKneeReplacementPage from './pages/PartialKneeReplacementPage';
 import CategoryPage from './pages/CategoryPage';
 import TreatmentPage from './pages/TreatmentPage';
 import PatientResultsPage from './pages/PatientResultsPage';
@@ -96,6 +97,9 @@ export default function App() {
     }
     if (path === '/total-knee-replacement/') {
       return <TotalKneeReplacementPage onOpenAppointment={handleOpenAppointment} />;
+    }
+    if (path === '/partial-knee-replacement/') {
+      return <PartialKneeReplacementPage onOpenAppointment={handleOpenAppointment} />;
     }
 
     for (const cat of SERVICE_CATEGORIES) {
