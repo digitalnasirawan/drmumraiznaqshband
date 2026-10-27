@@ -1475,10 +1475,6 @@ export default function ServicesMasterPage({ onOpenAppointment }) {
             {/* Card 1: BNI */}
             <div className="bg-slate-50/80 rounded-3xl p-6 sm:p-8 border border-brand-border flex flex-col justify-between shadow-card hover:shadow-card-hover transition-all">
               <div className="space-y-4">
-                <span className="text-xs font-bold uppercase tracking-wider text-brand-teal bg-teal-50 px-2.5 py-1 rounded border border-teal-100">
-                  Primary Orthopaedic Clinic
-                </span>
-                
                 {/* H3 */}
                 <h3 className="font-heading font-semibold text-xl text-brand-deep">
                   Bashir NeuroSpine Institute (BNI)
@@ -1518,10 +1514,6 @@ export default function ServicesMasterPage({ onOpenAppointment }) {
             {/* Card 2: Bahria International Hospitals */}
             <div className="bg-slate-50/80 rounded-3xl p-6 sm:p-8 border border-brand-border flex flex-col justify-between shadow-card hover:shadow-card-hover transition-all">
               <div className="space-y-4">
-                <span className="text-xs font-bold uppercase tracking-wider text-slate-500 bg-white px-2.5 py-1 rounded border border-slate-200">
-                  Hospital Consultation Chamber
-                </span>
-
                 {/* H3 */}
                 <h3 className="font-heading font-semibold text-xl text-brand-deep">
                   Bahria International Hospitals

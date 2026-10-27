@@ -10,13 +10,13 @@ import { DOCTOR_INFO } from '../data/siteData';
 import { WhatsAppIcon } from '../components/SocialIcons';
 
 export default function TreatmentPage({ treatment, category, onOpenAppointment }) {
-  if (!treatment || !category) return null;
-
   usePageSeo({
-    title: `${treatment.title} in Lahore | Prof. Dr. Mumraiz Naqshband`,
-    description: `${treatment.lead} Expert orthopaedic surgery and care by Prof. Dr. Mumraiz Naqshband at BNI Lahore.`,
-    canonicalUrl: treatment.slug
+    title: treatment ? `${treatment.title} in Lahore | Prof. Dr. Mumraiz Naqshband` : '',
+    description: treatment ? `${treatment.lead} Expert orthopaedic surgery and care by Prof. Dr. Mumraiz Naqshband at BNI Lahore.` : '',
+    canonicalUrl: treatment ? treatment.slug : ''
   });
+
+  if (!treatment || !category) return null;
 
   return (
     <div className="bg-white">

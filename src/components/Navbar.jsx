@@ -106,7 +106,7 @@ export default function Navbar({ onOpenAppointment }) {
           <Link to="/" className="flex items-center gap-3 group text-left shrink-0">
             {/* Orthopaedic Related Icon */}
             <div className="w-11 h-11 rounded-xl bg-brand-light border border-brand-border flex items-center justify-center shadow-sm group-hover:shadow-md transition-all shrink-0">
-              <OrthopaedicLogoIcon className="w-7 h-7" />
+              <OrthopaedicLogoIcon className="w-7 h-7 text-brand-deep" />
             </div>
             {/* Logo Text in Single Line + Subheading in Single Line */}
             <div className="flex flex-col justify-center">
@@ -114,7 +114,7 @@ export default function Navbar({ onOpenAppointment }) {
                 Prof. Dr. Mumraiz Naqshband
               </div>
               <div className="text-xs text-brand-blue font-semibold tracking-wide whitespace-nowrap">
-                Consultant Orthopedic Surgeon
+                Consultant Orthopaedic Surgeon
               </div>
             </div>
           </Link>
@@ -408,14 +408,7 @@ export default function Navbar({ onOpenAppointment }) {
           </div>
 
           {/* Mobile Menu Toggle Button */}
-          <div className="flex items-center gap-2 lg:hidden">
-            <button
-              onClick={() => onOpenAppointment && onOpenAppointment()}
-              className="bg-brand-teal text-white p-2 rounded-xl text-xs font-semibold flex items-center gap-1"
-              aria-label="Book Appointment"
-            >
-              <Calendar className="w-4 h-4" />
-            </button>
+          <div className="flex items-center lg:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-xl text-brand-deep hover:bg-slate-100 transition"

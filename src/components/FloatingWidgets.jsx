@@ -9,7 +9,7 @@ export default function FloatingWidgets({ onOpenAppointment }) {
   return (
     <>
       {/* Floating Desktop WhatsApp Button */}
-      <aside aria-label="Quick contact" className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-2">
+      <aside aria-label="Quick contact" className="fixed bottom-20 lg:bottom-6 right-4 sm:right-6 z-40 flex flex-col items-end gap-2">
         {showTooltip && (
           <div className="bg-white rounded-2xl shadow-xl border border-brand-border p-3 max-w-xs text-xs text-brand-dark animate-in fade-in slide-in-from-bottom-2 duration-150 relative">
             <button

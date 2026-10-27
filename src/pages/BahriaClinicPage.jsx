@@ -11,7 +11,7 @@ export default function BahriaClinicPage({ onOpenAppointment }) {
 
   usePageSeo({
     title: "Bahria International Hospitals Clinic | Prof. Dr. Mumraiz Naqshband",
-    description: "Consultant chambers of Prof. Dr. Mumraiz Naqshband at Bahria International Hospitals, Takbeer Block Sector B, Bahria Town, Lahore. Orthopaedic and joint consultation.",
+    description: "Clinic location of Prof. Dr. Mumraiz Naqshband at Bahria International Hospitals, Takbeer Block Sector B, Bahria Town, Lahore. Orthopaedic and joint consultation.",
     canonicalUrl: "/bahria-international-hospitals/"
   });
 
@@ -36,7 +36,7 @@ export default function BahriaClinicPage({ onOpenAppointment }) {
               Bahria International Hospitals
             </h1>
             <p className="text-white/80 text-base sm:text-lg leading-relaxed">
-              Takbeer Block Sector B Bahria Town, Lahore, 55150. Additional consultant chamber for patients in Southern Lahore and Bahria Town vicinity.
+              Takbeer Block Sector B Bahria Town, Lahore, 55150. Consultation location for patients in Southern Lahore and Bahria Town vicinity.
             </p>
           </div>
         </div>

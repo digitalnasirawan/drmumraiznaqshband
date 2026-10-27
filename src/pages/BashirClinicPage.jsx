@@ -11,7 +11,7 @@ export default function BashirClinicPage({ onOpenAppointment }) {
 
   usePageSeo({
     title: "Bashir NeuroSpine Institute (BNI) Clinic | Prof. Dr. Mumraiz Naqshband",
-    description: "Consultation chambers of Prof. Dr. Mumraiz Naqshband at BNI - Bashir NeuroSpine Institute, 18 Jail Rd, Shadman 1, Lahore. Primary robotic knee & orthopaedic surgery center.",
+    description: "Clinic location of Prof. Dr. Mumraiz Naqshband at BNI - Bashir NeuroSpine Institute, 18 Jail Rd, Shadman 1, Lahore. Orthopaedic and robotic joint replacement clinic.",
     canonicalUrl: "/bashir-neurospine-institute/"
   });
 
@@ -30,7 +30,7 @@ export default function BashirClinicPage({ onOpenAppointment }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-brand-teal text-xs font-semibold">
-              <span>Primary Consultation & Surgical Chamber</span>
+              <span>Consultation & Surgical Center</span>
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-white tracking-tight">
               Bashir NeuroSpine Institute (BNI)
@@ -50,10 +50,10 @@ export default function BashirClinicPage({ onOpenAppointment }) {
             <div className="lg:col-span-7 space-y-8">
               <div>
                 <h2 className="text-2xl sm:text-3xl font-bold font-heading text-brand-deep mb-4">
-                  About the BNI Consultation Chambers
+                  About Bashir NeuroSpine Institute (BNI)
                 </h2>
                 <p className="text-slate-700 text-sm sm:text-base leading-relaxed mb-4">
-                  Bashir NeuroSpine Institute (BNI) serves as the primary clinical center where <strong>Prof. Dr. Mumraiz Naqshband</strong> evaluates outpatient cases, provides second opinions, and performs robotic-assisted joint replacements and arthroscopic surgeries.
+                  Bashir NeuroSpine Institute (BNI) serves as the main facility where <strong>Prof. Dr. Mumraiz Naqshband</strong> evaluates outpatient cases, provides second opinions, and performs robotic-assisted joint replacements and arthroscopic surgeries.
                 </p>
                 <p className="text-slate-600 text-sm leading-relaxed">
                   The facility is equipped with dedicated laminar airflow operating suites, modern digital imaging, and an in-house orthopaedic physical therapy department to ensure seamless post-operative rehabilitation.

@@ -79,36 +79,62 @@ export function ResearchGateIcon({ className = "w-5 h-5", ...props }) {
 export function OrthopaedicLogoIcon({ className = "w-6 h-6", ...props }) {
   return (
     <svg 
-      viewBox="0 0 40 40" 
+      viewBox="0 0 32 32" 
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
       className={className}
       {...props}
     >
-      {/* Femur / Upper Bone Head */}
+      {/* Femur (Upper Bone Shaft & Dual Condyles) */}
       <path 
-        d="M14 6C14 4.34315 15.3431 3 17 3H23C24.6569 3 26 4.34315 26 6V11.5C26 13.5 24.5 15.5 22.5 16.5L20 17.5L17.5 16.5C15.5 15.5 14 13.5 14 11.5V6Z" 
-        fill="#1265A8"
+        d="M12 2.5h8v6.5c0 1.5 1 2.8 2.3 3.5 1.7.9 2.7 2.6 2.7 4.5 0 2.2-1.8 4-4 4-1.8 0-3.3-1.2-3.8-2.8-.3-.8-1.1-1.2-1.9-1.2s-1.6.4-1.9 1.2c-.5 1.6-2 2.8-3.8 2.8-2.2 0-4-1.8-4-4 0-1.9 1-3.6 2.7-4.5 1.3-.7 2.3-2 2.3-3.5V2.5z" 
+        fill="currentColor"
       />
-      {/* Tibia / Lower Bone Plateau */}
+      {/* Meniscus / Articular Cartilage Joint Arc (Brand Teal) */}
       <path 
-        d="M13 24C15.5 23 17.5 23 20 23C22.5 23 24.5 23 27 24C28 24.5 28.5 25.5 28.5 26.5V34C28.5 35.6569 27.1569 37 25.5 37H14.5C12.8431 37 11.5 35.6569 11.5 34V26.5C11.5 25.5 12 24.5 13 24Z" 
-        fill="#123B5D"
-      />
-      {/* Precision Joint Articulation Gap & Meniscus Arc (CORI Robotic Guidance) */}
-      <path 
-        d="M11 20C14 17.5 26 17.5 29 20" 
+        d="M6.5 21c1.8-1 4.5-1 6.5.5m5 0c2-1.5 4.7-1.5 6.5-.5" 
         stroke="#008B83" 
-        strokeWidth="3.2" 
+        strokeWidth="2.4" 
         strokeLinecap="round"
       />
-      {/* Robotic Center Target Marker */}
-      <circle cx="20" cy="20" r="2.5" fill="#008B83" />
-      {/* Sub-millimeter Axis Realignment Crosshair Pins */}
-      <path d="M20 13V15" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" />
-      <path d="M20 25V27" stroke="#008B83" strokeWidth="2" strokeLinecap="round" />
-      <path d="M7 20H9" stroke="#008B83" strokeWidth="2" strokeLinecap="round" />
-      <path d="M31 20H33" stroke="#008B83" strokeWidth="2" strokeLinecap="round" />
+      {/* Tibia & Fibula (Lower Joint Plateau & Shaft) */}
+      <path 
+        d="M8 24.2c2-.7 4.2-.7 6 .5 1 .6 1.8.6 2.8 0 1.8-1.2 4-1.2 6-.5 1.2.4 1.8 1.5 1.8 2.8v1h-3v2c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-2H8v-1c0-1.3.6-2.4 1.8-2.8z" 
+        fill="currentColor" 
+        fillOpacity="0.78"
+      />
+      {/* Surgical Joint Alignment / Precision Center Point */}
+      <circle cx="16" cy="18.5" r="1.2" fill="#008B83" />
+    </svg>
+  );
+}
+
+
+// Official Google 4-Color SVG Icon
+export function GoogleIcon({ className = "w-5 h-5", ...props }) {
+  return (
+    <svg 
+      viewBox="0 0 24 24" 
+      className={className} 
+      aria-hidden="true"
+      {...props}
+    >
+      <path 
+        fill="#4285F4" 
+        d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"
+      />
+      <path 
+        fill="#34A853" 
+        d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"
+      />
+      <path 
+        fill="#FBBC05" 
+        d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"
+      />
+      <path 
+        fill="#EA4335" 
+        d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"
+      />
     </svg>
   );
 }

@@ -106,7 +106,7 @@ export default function ContactPage({ onOpenAppointment }) {
                 <MapPin className="w-6 h-6" />
               </div>
               <div>
-                <div className="text-xs font-bold uppercase tracking-wider text-slate-400">Primary Chamber</div>
+                <div className="text-xs font-bold uppercase tracking-wider text-slate-400">Clinic Location</div>
                 <div className="text-sm font-bold text-brand-deep mt-1">
                   BNI - Bashir NeuroSpine Institute
                 </div>

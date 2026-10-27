@@ -47,7 +47,7 @@ export const DOCTOR_INFO = {
     healthwire: "https://healthwire.pk/doctors/lahore/orthopedic-surgeon/asst-prof-dr-mumraiz-naqshband",
     bniProfile: "https://bni.com.pk/dr-mumraiz-naqshband/",
     mayoHospital: "https://mayoortho.com/our-doctors/",
-    googleMaps: "https://maps.app.goo.gl/t9diagXPCTqfBTsx7"
+    googleMaps: "https://maps.app.goo.gl/zgCG2fXYSG2sLDAZ9"
   }
 };
 
@@ -57,13 +57,13 @@ export const CLINIC_LOCATIONS = [
     name: "BNI - Bashir NeuroSpine Institute",
     shortName: "Bashir NeuroSpine Institute",
     slug: "/bashir-neurospine-institute/",
-    type: "Primary Consultation & Surgical Clinic",
+    type: "Consultation & Surgical Clinic",
     address: "18 Jail Rd, Shadman 1 Shadman, Lahore, 54000, Pakistan",
     phone: "0321 4175761",
     timing: "Monday to Saturday: By Prior Appointment",
     isPrimary: true,
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.320498305088!2d74.3312!3d31.5369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391904e5f7a26f8d%3A0x6b8bc2150392ad72!2sBashir%20NeuroSpine%20Institute!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s",
-    googleMapsLink: "https://maps.app.goo.gl/t9diagXPCTqfBTsx7",
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.320498305088!2d74.3314489!3d31.5420858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391905ea859d0b4f%3A0x71864712450788f!2sProf.+Dr.+Mumraiz+Naqshband+%7C+Consultant+Orthopaedic+Surgeon+%7C+Robotic+Knee+Replacement+Surgeon!5e0!3m2!1sen!2spk!4v1710000000000!5m2!1sen!2spk",
+    googleMapsLink: "https://maps.app.goo.gl/zgCG2fXYSG2sLDAZ9",
     facilities: [
       "Advanced Robotic Knee Surgery Setup",
       "Dedicated Orthopaedic Operating Theatres",

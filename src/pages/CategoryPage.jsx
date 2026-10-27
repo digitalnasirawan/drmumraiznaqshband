@@ -5,13 +5,13 @@ import { Link } from '../utils/navigation';
 import { usePageSeo } from '../utils/seo';
 
 export default function CategoryPage({ category, onOpenAppointment }) {
-  if (!category) return null;
-
   usePageSeo({
-    title: `${category.title} | Prof. Dr. Mumraiz Naqshband`,
-    description: `${category.summary} Specialist orthopaedic care in Lahore, Pakistan led by Prof. Dr. Mumraiz Naqshband.`,
-    canonicalUrl: category.slug
+    title: category ? `${category.title} | Prof. Dr. Mumraiz Naqshband` : '',
+    description: category ? `${category.summary} Specialist orthopaedic care in Lahore, Pakistan led by Prof. Dr. Mumraiz Naqshband.` : '',
+    canonicalUrl: category ? category.slug : ''
   });
+
+  if (!category) return null;
 
   return (
     <div className="bg-white">

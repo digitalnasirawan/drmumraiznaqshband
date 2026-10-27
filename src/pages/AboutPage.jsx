@@ -137,7 +137,7 @@ export default function AboutPage({ onOpenAppointment }) {
 
                 <div className="p-4 bg-brand-light/90 border-t border-brand-border flex items-center justify-between text-left">
                   <div>
-                    <span className="text-[10px] text-slate-500 uppercase tracking-wider block font-semibold">Primary Chamber</span>
+                    <span className="text-[10px] text-slate-500 uppercase tracking-wider block font-semibold">Clinic Location</span>
                     <span className="text-xs font-bold text-brand-deep">BNI - 18 Jail Rd, Shadman 1, Lahore</span>
                   </div>
                   <a
@@ -735,7 +735,7 @@ export default function AboutPage({ onOpenAppointment }) {
           
           <div className="max-w-3xl space-y-3 mb-12">
             <span className="text-xs font-bold uppercase tracking-wider text-brand-teal bg-teal-50 px-3 py-1 rounded-full border border-teal-100">
-              Chambers & Appointments
+              Clinic Locations
             </span>
             {/* H2 */}
             <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-bold font-heading text-brand-deep leading-[1.25]">
@@ -751,10 +751,7 @@ export default function AboutPage({ onOpenAppointment }) {
             {/* Location 1: BNI */}
             <div className="bg-slate-50 rounded-3xl p-7 sm:p-8 border border-brand-border flex flex-col justify-between space-y-6">
               <div>
-                <span className="text-xs font-bold uppercase tracking-wider text-brand-teal bg-brand-light px-2.5 py-1 rounded">
-                  Primary Clinic
-                </span>
-                <h3 className="font-heading font-semibold text-xl text-brand-deep mt-3 mb-3">
+                <h3 className="font-heading font-semibold text-xl text-brand-deep mb-3">
                   Bashir NeuroSpine Institute (BNI)
                 </h3>
                 <div className="space-y-3 text-xs sm:text-sm text-slate-700">
@@ -783,10 +780,7 @@ export default function AboutPage({ onOpenAppointment }) {
             {/* Location 2: Bahria Hospital */}
             <div className="bg-slate-50 rounded-3xl p-7 sm:p-8 border border-brand-border flex flex-col justify-between space-y-6">
               <div>
-                <span className="text-xs font-bold uppercase tracking-wider text-slate-500 bg-white px-2.5 py-1 rounded border border-slate-200">
-                  Hospital Consultation Chamber
-                </span>
-                <h3 className="font-heading font-semibold text-xl text-brand-deep mt-3 mb-3">
+                <h3 className="font-heading font-semibold text-xl text-brand-deep mb-3">
                   Bahria International Hospitals
                 </h3>
                 <div className="space-y-3 text-xs sm:text-sm text-slate-700">

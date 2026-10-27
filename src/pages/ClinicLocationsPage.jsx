@@ -7,7 +7,7 @@ import { CLINIC_LOCATIONS, DOCTOR_INFO } from '../data/siteData';
 
 export default function ClinicLocationsPage({ onOpenAppointment }) {
   usePageSeo({
-    title: "Clinic Locations & Consultation Chambers | Prof. Dr. Mumraiz Naqshband",
+    title: "Clinic Locations in Lahore | Prof. Dr. Mumraiz Naqshband",
     description: "Official clinic locations for Prof. Dr. Mumraiz Naqshband in Lahore: BNI - Bashir NeuroSpine Institute (Jail Rd) and Bahria International Hospitals (Bahria Town).",
     canonicalUrl: "/clinic-locations/"
   });
@@ -21,7 +21,7 @@ export default function ClinicLocationsPage({ onOpenAppointment }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <span className="text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full bg-white/10 text-brand-teal inline-block">
-              Hospital & Clinic Chambers
+              Hospital & Clinic Locations
             </span>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-white tracking-tight">
               Our Consultation Clinics in Lahore
@@ -51,11 +51,7 @@ export default function ClinicLocationsPage({ onOpenAppointment }) {
                       <span className="text-xs font-bold uppercase tracking-wider text-brand-teal bg-teal-50 px-3 py-1 rounded-full border border-teal-100">
                         {clinic.type}
                       </span>
-                      {clinic.isPrimary && (
-                        <span className="text-xs font-bold text-white bg-brand-blue px-2.5 py-0.5 rounded-full">
-                          Primary Clinic
-                        </span>
-                      )}
+                      
                     </div>
 
                     <h2 className="text-2xl sm:text-3xl font-bold font-heading text-brand-deep mb-4">

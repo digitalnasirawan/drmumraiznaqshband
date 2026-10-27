@@ -7,7 +7,8 @@ import {
 import { Link } from '../utils/navigation';
 import { usePageSeo } from '../utils/seo';
 import { DOCTOR_INFO, CLINIC_LOCATIONS, SERVICE_CATEGORIES } from '../data/siteData';
-import { WhatsAppIcon } from '../components/SocialIcons';
+import { WhatsAppIcon, GoogleIcon } from '../components/SocialIcons';
+import GoogleReviewsSection from '../components/GoogleReviewsSection';
 
 export default function HomePage({ onOpenAppointment }) {
   // B2. Search, Social and Indexing Metadata
@@ -160,7 +161,7 @@ export default function HomePage({ onOpenAppointment }) {
 
                 <div className="p-4 bg-brand-light/90 border-t border-brand-border flex items-center justify-between text-left">
                   <div>
-                    <span className="text-[10px] text-slate-500 uppercase tracking-wider block font-semibold">Primary Clinic</span>
+                    <span className="text-[10px] text-slate-500 uppercase tracking-wider block font-semibold">Location</span>
                     <span className="text-xs font-bold text-brand-deep">BNI - 18 Jail Rd, Shadman 1, Lahore</span>
                   </div>
                   <a
@@ -934,14 +935,19 @@ export default function HomePage({ onOpenAppointment }) {
       </section>
 
       {/* =========================================================================
-          S09 — CLINIC LOCATIONS
+          GOOGLE BUSINESS REVIEWS SECTION
+          ========================================================================= */}
+      <GoogleReviewsSection />
+
+      {/* =========================================================================
+          S09 — CLINIC LOCATIONS & GOOGLE MAP
           ========================================================================= */}
       <section className="py-16 lg:py-24 bg-white border-t border-brand-border text-left">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="max-w-3xl space-y-3 mb-12">
             <span className="text-xs font-bold uppercase tracking-wider text-brand-teal bg-teal-50 px-3 py-1 rounded-full border border-teal-100">
-              Consultation Chambers
+              Clinic Locations
             </span>
             {/* H2 */}
             <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-bold font-heading text-brand-deep leading-[1.25]">
@@ -957,10 +963,7 @@ export default function HomePage({ onOpenAppointment }) {
             {/* Card 1: BNI */}
             <div className="bg-slate-50 rounded-3xl p-7 sm:p-8 border border-brand-border flex flex-col justify-between space-y-6">
               <div>
-                <span className="text-xs font-bold uppercase tracking-wider text-brand-teal bg-brand-light px-2.5 py-1 rounded">
-                  Primary Clinic
-                </span>
-                <h3 className="font-heading font-semibold text-xl text-brand-deep mt-3 mb-3">
+                <h3 className="font-heading font-semibold text-xl text-brand-deep mb-3">
                   Bashir NeuroSpine Institute (BNI)
                 </h3>
                 <div className="space-y-3 text-xs sm:text-sm text-slate-700">
@@ -968,20 +971,44 @@ export default function HomePage({ onOpenAppointment }) {
                     <MapPin className="w-4 h-4 text-brand-teal shrink-0 mt-0.5" />
                     <span><strong>Address:</strong> BNI - Bashir NeuroSpine Institute, 18 Jail Rd, Shadman 1 Shadman, Lahore, 54000, Pakistan.</span>
                   </div>
-                  <div className="flex items-center gap-2.5">
+                                    <div className="flex items-center gap-2.5">
                     <Phone className="w-4 h-4 text-brand-teal shrink-0" />
                     <span><strong>Appointment Number:</strong> 0321 4175761</span>
                   </div>
                 </div>
+
+                {/* Embedded Interactive Google Map for BNI Clinic GMB Listing */}
+                <div className="w-full h-52 sm:h-60 rounded-2xl overflow-hidden border border-brand-border shadow-inner mt-4">
+                  <iframe
+                    title="Prof. Dr. Mumraiz Naqshband - BNI Clinic Google Map"
+                    src={CLINIC_LOCATIONS[0].mapEmbedUrl}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="w-full h-full"
+                  ></iframe>
+                </div>
               </div>
 
-              <div className="pt-2 flex flex-wrap gap-3">
+              <div className="pt-2 flex flex-wrap gap-2.5 sm:gap-3">
                 <Link
                   to="/bashir-neurospine-institute/"
                   className="py-2.5 px-4 rounded-xl bg-brand-light hover:bg-brand-blue text-brand-blue hover:text-white font-semibold text-xs transition"
                 >
                   View Clinic Details
                 </Link>
+                <a
+                  href={CLINIC_LOCATIONS[0].googleMapsLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="py-2.5 px-4 rounded-xl bg-white hover:bg-slate-100 text-brand-deep border border-brand-border font-semibold text-xs transition flex items-center gap-1.5 shadow-sm"
+                >
+                  <GoogleIcon className="w-3.5 h-3.5" />
+                  <span>Open on Google Maps</span>
+                </a>
                 <a
                   href="https://wa.me/923214175761"
                   target="_blank"
@@ -997,10 +1024,7 @@ export default function HomePage({ onOpenAppointment }) {
             {/* Card 2: Bahria International Hospitals */}
             <div className="bg-slate-50 rounded-3xl p-7 sm:p-8 border border-brand-border flex flex-col justify-between space-y-6">
               <div>
-                <span className="text-xs font-bold uppercase tracking-wider text-slate-500 bg-white px-2.5 py-1 rounded border border-slate-200">
-                  Hospital Consultation Chamber
-                </span>
-                <h3 className="font-heading font-semibold text-xl text-brand-deep mt-3 mb-3">
+                <h3 className="font-heading font-semibold text-xl text-brand-deep mb-3">
                   Bahria International Hospitals
                 </h3>
                 <div className="space-y-3 text-xs sm:text-sm text-slate-700">
@@ -1214,7 +1238,7 @@ export default function HomePage({ onOpenAppointment }) {
 
             {/* Right Column: Contact Form conforming to B5.5 */}
             <div className="lg:col-span-7">
-              <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-brand-border">
+              <div className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-8 shadow-xl border border-brand-border">
                 
                 <h3 className="text-xl font-bold font-heading text-brand-deep mb-1">
                   Enquire About Consultation Arrangements
@@ -1258,7 +1282,7 @@ export default function HomePage({ onOpenAppointment }) {
                           placeholder="Your Full Name"
                           value={formData.fullName}
                           onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                          className="w-full px-4 py-3 rounded-xl border border-brand-border focus:ring-2 focus:ring-brand-blue outline-none text-sm transition"
+                          className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-brand-border focus:ring-2 focus:ring-brand-blue outline-none text-base sm:text-sm transition"
                         />
                       </div>
 
@@ -1272,7 +1296,7 @@ export default function HomePage({ onOpenAppointment }) {
                           placeholder="0321 0000000"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          className="w-full px-4 py-3 rounded-xl border border-brand-border focus:ring-2 focus:ring-brand-blue outline-none text-sm transition"
+                          className="w-full px-4 py-3 rounded-xl border border-brand-border focus:ring-2 focus:ring-brand-blue outline-none text-base sm:text-sm transition"
                         />
                       </div>
                     </div>
@@ -1284,7 +1308,7 @@ export default function HomePage({ onOpenAppointment }) {
                       <select
                         value={formData.preferredClinic}
                         onChange={(e) => setFormData({ ...formData, preferredClinic: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl border border-brand-border focus:ring-2 focus:ring-brand-blue outline-none text-sm bg-white transition"
+                        className="w-full px-4 py-3 rounded-xl border border-brand-border focus:ring-2 focus:ring-brand-blue outline-none text-base sm:text-sm bg-white transition"
                       >
                         <option value="BNI - Bashir NeuroSpine Institute, Lahore">
                           BNI - Bashir NeuroSpine Institute (18 Jail Rd, Shadman 1, Lahore)
@@ -1305,7 +1329,7 @@ export default function HomePage({ onOpenAppointment }) {
                         placeholder="Please briefly outline your appointment enquiry or condition..."
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl border border-brand-border focus:ring-2 focus:ring-brand-blue outline-none text-sm transition"
+                        className="w-full px-4 py-3 rounded-xl border border-brand-border focus:ring-2 focus:ring-brand-blue outline-none text-base sm:text-sm transition"
                       ></textarea>
                     </div>
 

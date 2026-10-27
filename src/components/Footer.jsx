@@ -95,7 +95,7 @@ export default function Footer({ onOpenAppointment }) {
 
             <div className="text-xs text-white/60 space-y-1">
               <div><strong>Academic Role:</strong> Professor at King Edward Medical University (KEMU)</div>
-              <div><strong>Primary Clinic:</strong> BNI - Bashir NeuroSpine Institute, 18 Jail Rd, Shadman 1, Lahore</div>
+              <div><strong>Location:</strong> BNI - Bashir NeuroSpine Institute, 18 Jail Rd, Shadman 1, Lahore</div>
               <div><strong>Phone:</strong> {DOCTOR_INFO.phoneInternational}</div>
             </div>
 
