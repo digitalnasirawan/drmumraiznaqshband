@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { 
-  Award, Shield, Calendar, Phone, CheckCircle, ChevronRight, 
-  MapPin, Clock, ArrowRight, Activity, Cpu, HeartPulse, Crosshair, 
-  Layers, Bone, Sparkles, ExternalLink, HelpCircle, FileText, CheckCircle2
+  Award, Calendar, Phone, CheckCircle, ChevronRight, 
+  MapPin, ArrowRight, Cpu, Sparkles 
 } from 'lucide-react';
 import { Link } from '../utils/navigation';
 import { usePageSeo } from '../utils/seo';
-import { DOCTOR_INFO, CLINIC_LOCATIONS, SERVICE_CATEGORIES } from '../data/siteData';
+import { DOCTOR_INFO, CLINIC_LOCATIONS } from '../data/siteData';
 import { WhatsAppIcon, GoogleIcon } from '../components/SocialIcons';
 import GoogleReviewsSection from '../components/GoogleReviewsSection';
 
@@ -269,28 +268,40 @@ export default function HomePage({ onOpenAppointment }) {
             </p>
           </div>
 
-          {/* Seven Responsive Service Cards */}
+          {/* Eight Responsive Service Cards with Featured Images */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             
             {/* Card 1: Robotic Knee Replacement */}
-            <div className="bg-white rounded-2xl p-6 border border-brand-border shadow-card hover:shadow-card-hover transition-all flex flex-col justify-between">
+            <div className="bg-white rounded-2xl p-5 sm:p-6 border-2 border-brand-teal/40 shadow-card hover:shadow-card-hover transition-all flex flex-col justify-between group relative">
               <div>
-                <div className="w-10 h-10 rounded-xl bg-brand-light text-brand-blue flex items-center justify-center mb-4">
-                  <Cpu className="w-5 h-5 text-brand-teal" />
+                <Link to="/robotic-knee-replacement/" className="block overflow-hidden rounded-xl mb-4 aspect-[16/9] bg-slate-100">
+                  <img
+                    src="/images/services/cori-robotic-knee-replacement-lahore.webp"
+                    alt="Medical illustration of robotic-assisted knee replacement and artificial knee joint reconstruction."
+                    width="1024"
+                    height="576"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </Link>
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-brand-teal bg-teal-50 px-2.5 py-0.5 rounded-full border border-teal-100">
+                    Primary Speciality
+                  </span>
                 </div>
-                <h3 className="font-heading font-semibold text-lg sm:text-[21px] text-brand-deep mb-2 leading-[1.35]">
-                  Robotic Knee Replacement & Joint Reconstruction
+                <h3 className="font-heading font-semibold text-lg sm:text-[20px] text-brand-deep mb-2.5 leading-[1.35]">
+                  <Link to="/robotic-knee-replacement/" className="hover:text-brand-blue transition-colors">
+                    Robotic Knee Replacement & Joint Reconstruction
+                  </Link>
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-700 leading-relaxed mb-3">
-                  Robotic-assisted knee replacement uses advanced technology to support surgical planning and the positioning of knee replacement components. Prof. Dr. Mumraiz Naqshband uses the CORI Surgical System as part of his knee replacement practice.
-                </p>
-                <p className="text-xs text-slate-500 leading-relaxed mb-4">
-                  Services include robotic-assisted knee replacement, total knee replacement, partial knee replacement, revision surgery and selected joint preservation procedures.
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  CORI robotic-assisted knee replacement supports personalised surgical planning and precise guidance for suitable patients with advanced knee problems.
                 </p>
               </div>
               <Link
                 to="/robotic-knee-replacement/"
-                className="w-full py-2.5 px-3 rounded-xl bg-brand-light hover:bg-brand-blue text-brand-blue hover:text-white font-semibold text-xs transition-colors flex items-center justify-center gap-1.5 mt-auto"
+                className="w-full py-2.5 px-3 rounded-xl bg-brand-teal hover:bg-brand-tealHover text-white font-semibold text-xs transition-colors flex items-center justify-center gap-1.5 mt-5 shadow-sm"
               >
                 <span>Explore Knee Replacement Services</span>
                 <ChevronRight className="w-3.5 h-3.5" />
@@ -298,24 +309,31 @@ export default function HomePage({ onOpenAppointment }) {
             </div>
 
             {/* Card 2: Hip Replacement Surgery */}
-            <div className="bg-white rounded-2xl p-6 border border-brand-border shadow-card hover:shadow-card-hover transition-all flex flex-col justify-between">
+            <div className="bg-white rounded-2xl p-5 sm:p-6 border border-brand-border shadow-card hover:shadow-card-hover transition-all flex flex-col justify-between group">
               <div>
-                <div className="w-10 h-10 rounded-xl bg-brand-light text-brand-blue flex items-center justify-center mb-4">
-                  <Shield className="w-5 h-5 text-brand-teal" />
-                </div>
-                <h3 className="font-heading font-semibold text-lg sm:text-[21px] text-brand-deep mb-2 leading-[1.35]">
-                  Hip Replacement Surgery
+                <Link to="/hip-replacement-surgery/" className="block overflow-hidden rounded-xl mb-4 aspect-[16/9] bg-slate-100">
+                  <img
+                    src="/images/services/hip-replacement-surgery-lahore.webp"
+                    alt="3D medical illustration showing an artificial hip joint with a femoral stem, ball and acetabular cup."
+                    width="1024"
+                    height="576"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </Link>
+                <h3 className="font-heading font-semibold text-lg sm:text-[20px] text-brand-deep mb-2.5 leading-[1.35]">
+                  <Link to="/hip-replacement-surgery/" className="hover:text-brand-blue transition-colors">
+                    Hip Replacement Surgery
+                  </Link>
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-700 leading-relaxed mb-3">
-                  Hip replacement surgery may be considered for patients experiencing significant hip pain, joint damage or reduced mobility when other treatments have not provided sufficient relief.
-                </p>
-                <p className="text-xs text-slate-500 leading-relaxed mb-4">
-                  Services include total hip replacement, revision hip replacement and management of selected hip joint disorders.
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Hip replacement surgery replaces damaged joint surfaces to help reduce pain and improve mobility in suitable patients.
                 </p>
               </div>
               <Link
                 to="/hip-replacement-surgery/"
-                className="w-full py-2.5 px-3 rounded-xl bg-brand-light hover:bg-brand-blue text-brand-blue hover:text-white font-semibold text-xs transition-colors flex items-center justify-center gap-1.5 mt-auto"
+                className="w-full py-2.5 px-3 rounded-xl bg-brand-light hover:bg-brand-blue text-brand-blue hover:text-white font-semibold text-xs transition-colors flex items-center justify-center gap-1.5 mt-5"
               >
                 <span>Explore Hip Replacement Services</span>
                 <ChevronRight className="w-3.5 h-3.5" />
@@ -323,24 +341,31 @@ export default function HomePage({ onOpenAppointment }) {
             </div>
 
             {/* Card 3: Sports Injury Surgery */}
-            <div className="bg-white rounded-2xl p-6 border border-brand-border shadow-card hover:shadow-card-hover transition-all flex flex-col justify-between">
+            <div className="bg-white rounded-2xl p-5 sm:p-6 border border-brand-border shadow-card hover:shadow-card-hover transition-all flex flex-col justify-between group">
               <div>
-                <div className="w-10 h-10 rounded-xl bg-brand-light text-brand-blue flex items-center justify-center mb-4">
-                  <Activity className="w-5 h-5 text-brand-teal" />
-                </div>
-                <h3 className="font-heading font-semibold text-lg sm:text-[21px] text-brand-deep mb-2 leading-[1.35]">
-                  Sports Injury Surgery
+                <Link to="/sports-injury-surgery/" className="block overflow-hidden rounded-xl mb-4 aspect-[16/9] bg-slate-100">
+                  <img
+                    src="/images/services/sports-injury-surgery-lahore.webp"
+                    alt="Medical illustration showing a knee ligament injury and arthroscopic surgical instruments."
+                    width="1024"
+                    height="576"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </Link>
+                <h3 className="font-heading font-semibold text-lg sm:text-[20px] text-brand-deep mb-2.5 leading-[1.35]">
+                  <Link to="/sports-injury-surgery/" className="hover:text-brand-blue transition-colors">
+                    Sports Injury Surgery
+                  </Link>
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-700 leading-relaxed mb-3">
-                  Sports injuries can affect the ligaments, cartilage, menisci and other structures that support joint movement and stability.
-                </p>
-                <p className="text-xs text-slate-500 leading-relaxed mb-4">
-                  Specialist assessment and treatment options include ACL reconstruction, PCL reconstruction, meniscus repair and management of complex knee ligament injuries.
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Assessment and treatment of sports-related knee injuries, including ligament tears, meniscus damage and joint instability.
                 </p>
               </div>
               <Link
                 to="/sports-injury-surgery/"
-                className="w-full py-2.5 px-3 rounded-xl bg-brand-light hover:bg-brand-blue text-brand-blue hover:text-white font-semibold text-xs transition-colors flex items-center justify-center gap-1.5 mt-auto"
+                className="w-full py-2.5 px-3 rounded-xl bg-brand-light hover:bg-brand-blue text-brand-blue hover:text-white font-semibold text-xs transition-colors flex items-center justify-center gap-1.5 mt-5"
               >
                 <span>Explore Sports Injury Services</span>
                 <ChevronRight className="w-3.5 h-3.5" />
@@ -348,24 +373,31 @@ export default function HomePage({ onOpenAppointment }) {
             </div>
 
             {/* Card 4: Arthroscopic & Minimally Invasive Surgery */}
-            <div className="bg-white rounded-2xl p-6 border border-brand-border shadow-card hover:shadow-card-hover transition-all flex flex-col justify-between">
+            <div className="bg-white rounded-2xl p-5 sm:p-6 border border-brand-border shadow-card hover:shadow-card-hover transition-all flex flex-col justify-between group">
               <div>
-                <div className="w-10 h-10 rounded-xl bg-brand-light text-brand-blue flex items-center justify-center mb-4">
-                  <Crosshair className="w-5 h-5 text-brand-teal" />
-                </div>
-                <h3 className="font-heading font-semibold text-lg sm:text-[21px] text-brand-deep mb-2 leading-[1.35]">
-                  Arthroscopic & Minimally Invasive Surgery
+                <Link to="/arthroscopic-surgery/" className="block overflow-hidden rounded-xl mb-4 aspect-[16/9] bg-slate-100">
+                  <img
+                    src="/images/services/arthroscopic-minimally-invasive-surgery-lahore.webp"
+                    alt="3D medical illustration of knee arthroscopy showing a camera and instruments inside the knee joint."
+                    width="1024"
+                    height="576"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </Link>
+                <h3 className="font-heading font-semibold text-lg sm:text-[20px] text-brand-deep mb-2.5 leading-[1.35]">
+                  <Link to="/arthroscopic-surgery/" className="hover:text-brand-blue transition-colors">
+                    Arthroscopic & Minimally Invasive Surgery
+                  </Link>
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-700 leading-relaxed mb-3">
-                  Arthroscopy allows surgeons to examine and treat selected joint conditions using a camera and specialised instruments introduced through small incisions.
-                </p>
-                <p className="text-xs text-slate-500 leading-relaxed mb-4">
-                  Procedures may include knee arthroscopy, shoulder arthroscopy, meniscus surgery and selected ligament reconstruction procedures.
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Minimally invasive joint procedures use small instruments and a camera to assess and treat selected joint conditions.
                 </p>
               </div>
               <Link
                 to="/arthroscopic-surgery/"
-                className="w-full py-2.5 px-3 rounded-xl bg-brand-light hover:bg-brand-blue text-brand-blue hover:text-white font-semibold text-xs transition-colors flex items-center justify-center gap-1.5 mt-auto"
+                className="w-full py-2.5 px-3 rounded-xl bg-brand-light hover:bg-brand-blue text-brand-blue hover:text-white font-semibold text-xs transition-colors flex items-center justify-center gap-1.5 mt-5"
               >
                 <span>Explore Arthroscopic Surgery</span>
                 <ChevronRight className="w-3.5 h-3.5" />
@@ -373,24 +405,31 @@ export default function HomePage({ onOpenAppointment }) {
             </div>
 
             {/* Card 5: Shoulder & Other Joint Disorders */}
-            <div className="bg-white rounded-2xl p-6 border border-brand-border shadow-card hover:shadow-card-hover transition-all flex flex-col justify-between">
+            <div className="bg-white rounded-2xl p-5 sm:p-6 border border-brand-border shadow-card hover:shadow-card-hover transition-all flex flex-col justify-between group">
               <div>
-                <div className="w-10 h-10 rounded-xl bg-brand-light text-brand-blue flex items-center justify-center mb-4">
-                  <Layers className="w-5 h-5 text-brand-teal" />
-                </div>
-                <h3 className="font-heading font-semibold text-lg sm:text-[21px] text-brand-deep mb-2 leading-[1.35]">
-                  Shoulder & Other Joint Disorders
+                <Link to="/shoulder-joint-disorders/" className="block overflow-hidden rounded-xl mb-4 aspect-[16/9] bg-slate-100">
+                  <img
+                    src="/images/services/shoulder-joint-disorders-lahore.webp"
+                    alt="3D medical illustration of shoulder arthroscopy showing the rotator cuff tendons and surgical repair instruments."
+                    width="1024"
+                    height="576"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </Link>
+                <h3 className="font-heading font-semibold text-lg sm:text-[20px] text-brand-deep mb-2.5 leading-[1.35]">
+                  <Link to="/shoulder-joint-disorders/" className="hover:text-brand-blue transition-colors">
+                    Shoulder & Other Joint Disorders
+                  </Link>
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-700 leading-relaxed mb-3">
-                  Shoulder pain, instability and soft tissue injuries can affect everyday activities, work and sports participation.
-                </p>
-                <p className="text-xs text-slate-500 leading-relaxed mb-4">
-                  Prof. Dr. Mumraiz Naqshband provides assessment and management of selected shoulder conditions, including rotator cuff injuries, shoulder instability and sports-related injuries.
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Specialist assessment and treatment for shoulder pain, rotator cuff injuries, joint instability and other joint conditions.
                 </p>
               </div>
               <Link
                 to="/shoulder-joint-disorders/"
-                className="w-full py-2.5 px-3 rounded-xl bg-brand-light hover:bg-brand-blue text-brand-blue hover:text-white font-semibold text-xs transition-colors flex items-center justify-center gap-1.5 mt-auto"
+                className="w-full py-2.5 px-3 rounded-xl bg-brand-light hover:bg-brand-blue text-brand-blue hover:text-white font-semibold text-xs transition-colors flex items-center justify-center gap-1.5 mt-5"
               >
                 <span>Explore Shoulder & Joint Care</span>
                 <ChevronRight className="w-3.5 h-3.5" />
@@ -398,24 +437,31 @@ export default function HomePage({ onOpenAppointment }) {
             </div>
 
             {/* Card 6: Orthopaedic Trauma & Fracture Surgery */}
-            <div className="bg-white rounded-2xl p-6 border border-brand-border shadow-card hover:shadow-card-hover transition-all flex flex-col justify-between">
+            <div className="bg-white rounded-2xl p-5 sm:p-6 border border-brand-border shadow-card hover:shadow-card-hover transition-all flex flex-col justify-between group">
               <div>
-                <div className="w-10 h-10 rounded-xl bg-brand-light text-brand-blue flex items-center justify-center mb-4">
-                  <Bone className="w-5 h-5 text-brand-teal" />
-                </div>
-                <h3 className="font-heading font-semibold text-lg sm:text-[21px] text-brand-deep mb-2 leading-[1.35]">
-                  Orthopaedic Trauma & Fracture Surgery
+                <Link to="/fracture-trauma-surgery/" className="block overflow-hidden rounded-xl mb-4 aspect-[16/9] bg-slate-100">
+                  <img
+                    src="/images/services/orthopaedic-trauma-fracture-surgery-lahore.webp"
+                    alt="3D medical illustration of a fractured tibia stabilised with a metal fixation plate and screws."
+                    width="1024"
+                    height="576"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </Link>
+                <h3 className="font-heading font-semibold text-lg sm:text-[20px] text-brand-deep mb-2.5 leading-[1.35]">
+                  <Link to="/fracture-trauma-surgery/" className="hover:text-brand-blue transition-colors">
+                    Orthopaedic Trauma & Fracture Surgery
+                  </Link>
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-700 leading-relaxed mb-3">
-                  Fractures and traumatic injuries require careful assessment to determine the most appropriate treatment and rehabilitation plan.
-                </p>
-                <p className="text-xs text-slate-500 leading-relaxed mb-4">
-                  Services include fracture management, surgical fixation, complex orthopaedic trauma care and treatment of selected injuries involving joints.
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Assessment and surgical treatment of fractures and complex bone injuries to support healing and restore function.
                 </p>
               </div>
               <Link
                 to="/fracture-trauma-surgery/"
-                className="w-full py-2.5 px-3 rounded-xl bg-brand-light hover:bg-brand-blue text-brand-blue hover:text-white font-semibold text-xs transition-colors flex items-center justify-center gap-1.5 mt-auto"
+                className="w-full py-2.5 px-3 rounded-xl bg-brand-light hover:bg-brand-blue text-brand-blue hover:text-white font-semibold text-xs transition-colors flex items-center justify-center gap-1.5 mt-5"
               >
                 <span>Explore Fracture & Trauma Services</span>
                 <ChevronRight className="w-3.5 h-3.5" />
@@ -423,24 +469,31 @@ export default function HomePage({ onOpenAppointment }) {
             </div>
 
             {/* Card 7: Arthritis & Joint Pain Management */}
-            <div className="bg-white rounded-2xl p-6 border border-brand-border shadow-card hover:shadow-card-hover transition-all flex flex-col justify-between">
+            <div className="bg-white rounded-2xl p-5 sm:p-6 border border-brand-border shadow-card hover:shadow-card-hover transition-all flex flex-col justify-between group">
               <div>
-                <div className="w-10 h-10 rounded-xl bg-brand-light text-brand-blue flex items-center justify-center mb-4">
-                  <HeartPulse className="w-5 h-5 text-brand-teal" />
-                </div>
-                <h3 className="font-heading font-semibold text-lg sm:text-[21px] text-brand-deep mb-2 leading-[1.35]">
-                  Arthritis & Joint Pain Management
+                <Link to="/arthritis-joint-pain/" className="block overflow-hidden rounded-xl mb-4 aspect-[16/9] bg-slate-100">
+                  <img
+                    src="/images/services/arthritis-joint-pain-management-lahore.webp"
+                    alt="3D medical illustration showing knee osteoarthritis, damaged cartilage and joint inflammation."
+                    width="1024"
+                    height="576"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </Link>
+                <h3 className="font-heading font-semibold text-lg sm:text-[20px] text-brand-deep mb-2.5 leading-[1.35]">
+                  <Link to="/arthritis-joint-pain/" className="hover:text-brand-blue transition-colors">
+                    Arthritis & Joint Pain Management
+                  </Link>
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-700 leading-relaxed mb-3">
-                  Arthritis and degenerative joint conditions may cause pain, stiffness, swelling and difficulty with movement.
-                </p>
-                <p className="text-xs text-slate-500 leading-relaxed mb-4">
-                  Treatment begins with an assessment of the underlying condition. Depending on the findings, management may include non-surgical care, rehabilitation, medication where appropriate or consideration of joint replacement surgery.
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Personalised care for knee and hip arthritis, including non-surgical treatment and joint replacement assessment when appropriate.
                 </p>
               </div>
               <Link
                 to="/arthritis-joint-pain/"
-                className="w-full py-2.5 px-3 rounded-xl bg-brand-light hover:bg-brand-blue text-brand-blue hover:text-white font-semibold text-xs transition-colors flex items-center justify-center gap-1.5 mt-auto"
+                className="w-full py-2.5 px-3 rounded-xl bg-brand-light hover:bg-brand-blue text-brand-blue hover:text-white font-semibold text-xs transition-colors flex items-center justify-center gap-1.5 mt-5"
               >
                 <span>Explore Arthritis & Joint Pain Care</span>
                 <ChevronRight className="w-3.5 h-3.5" />
@@ -456,13 +509,13 @@ export default function HomePage({ onOpenAppointment }) {
                 <h3 className="font-heading font-bold text-xl text-white mt-3 mb-2">
                   Complete Clinical Services Directory
                 </h3>
-                <p className="text-xs text-white/80 leading-relaxed mb-4">
+                <p className="text-xs sm:text-sm text-white/80 leading-relaxed mb-4">
                   Explore our comprehensive directory of orthopaedic procedures and consultation guidance across all specialties.
                 </p>
               </div>
               <Link
                 to="/services/"
-                className="w-full py-3 px-4 rounded-xl bg-brand-teal hover:bg-brand-tealHover text-white font-semibold text-xs transition-colors flex items-center justify-center gap-2"
+                className="w-full py-3 px-4 rounded-xl bg-brand-teal hover:bg-brand-tealHover text-white font-semibold text-xs transition-colors flex items-center justify-center gap-2 mt-5 shadow-sm"
               >
                 <span>View Full Services Directory</span>
                 <ArrowRight className="w-4 h-4" />
@@ -568,369 +621,6 @@ export default function HomePage({ onOpenAppointment }) {
             </div>
 
           </div>
-        </div>
-      </section>
-
-      {/* =========================================================================
-          S05 — PROFESSIONAL QUALIFICATIONS & EXPERIENCE
-          ========================================================================= */}
-      <section className="py-16 lg:py-24 bg-white text-left">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="max-w-3xl space-y-3 mb-12">
-            <span className="text-xs font-bold uppercase tracking-wider text-brand-teal bg-teal-50 px-3 py-1 rounded-full border border-teal-100">
-              Verified Credentials
-            </span>
-            {/* H2 */}
-            <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-bold font-heading text-brand-deep leading-[1.25]">
-              International Qualifications & Specialist Orthopaedic Experience
-            </h2>
-            <p className="text-slate-700 text-sm sm:text-base leading-[1.7]">
-              Prof. Dr. Mumraiz Naqshband brings international medical education, specialist orthopaedic qualifications and experience in joint replacement, arthroscopy and trauma surgery to his clinical practice.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            
-            {/* H3: Medical Education & Professional Qualifications */}
-            <div className="bg-slate-50 rounded-2xl p-6 border border-brand-border space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-brand-light text-brand-blue flex items-center justify-center">
-                <Award className="w-5 h-5 text-brand-teal" />
-              </div>
-              <h3 className="font-heading font-semibold text-lg text-brand-deep">
-                Medical Education & Qualifications
-              </h3>
-              <div className="space-y-3 text-xs sm:text-sm text-slate-700 pt-1">
-                <div>
-                  <div className="font-bold text-brand-deep">MBChB — New Zealand</div>
-                  <div className="text-slate-500 text-xs">Medical qualification obtained in New Zealand.</div>
-                </div>
-                <div>
-                  <div className="font-bold text-brand-deep">FRACS Orthopaedics — Australia</div>
-                  <div className="text-slate-500 text-xs">Fellowship of the Royal Australasian College of Surgeons in Orthopaedics.</div>
-                </div>
-                <div>
-                  <div className="font-bold text-brand-deep">FRCS Trauma & Orthopaedics — UK</div>
-                  <div className="text-slate-500 text-xs">Fellowship of the Royal College of Surgeons in Trauma & Orthopaedics.</div>
-                </div>
-              </div>
-            </div>
-
-            {/* H3: Specialist Training */}
-            <div className="bg-slate-50 rounded-2xl p-6 border border-brand-border space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-brand-light text-brand-blue flex items-center justify-center">
-                <Shield className="w-5 h-5 text-brand-teal" />
-              </div>
-              <h3 className="font-heading font-semibold text-lg text-brand-deep">
-                Specialist Training
-              </h3>
-              <p className="text-xs text-slate-500">
-                His professional background includes fellowships in:
-              </p>
-              <ul className="space-y-2 text-xs sm:text-sm text-slate-700 pt-1">
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-brand-teal shrink-0" />
-                  <span>Joint Replacement Surgery</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-brand-teal shrink-0" />
-                  <span>Arthroscopic Surgery</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-brand-teal shrink-0" />
-                  <span>Orthopaedic Trauma Surgery</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* H3: Academic Role */}
-            <div className="bg-slate-50 rounded-2xl p-6 border border-brand-border space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-brand-light text-brand-blue flex items-center justify-center">
-                <FileText className="w-5 h-5 text-brand-teal" />
-              </div>
-              <h3 className="font-heading font-semibold text-lg text-brand-deep">
-                Academic Role
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-700 pt-1">
-                Professor at King Edward Medical University (KEMU), Lahore.
-              </p>
-              <p className="text-xs text-slate-500">
-                Involved in academic training, surgical education and clinical instruction for future orthopaedic specialists.
-              </p>
-            </div>
-
-            {/* H3: International Experience */}
-            <div className="bg-slate-50 rounded-2xl p-6 border border-brand-border space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-brand-light text-brand-blue flex items-center justify-center">
-                <Clock className="w-5 h-5 text-brand-teal" />
-              </div>
-              <h3 className="font-heading font-semibold text-lg text-brand-deep">
-                International Experience
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-700 pt-1">
-                Over 20 years of international experience in orthopaedic surgery.
-              </p>
-              <p className="text-xs text-slate-500">
-                Extensive clinical training and consultant practice across New Zealand, Australia, the UK, and Pakistan.
-              </p>
-            </div>
-
-          </div>
-
-          <div className="mt-8 text-left">
-            <Link
-              to="/about/"
-              className="inline-flex items-center gap-2 text-brand-blue hover:text-brand-deep font-semibold text-sm group"
-            >
-              <span>View Full Professional Profile</span>
-              <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-
-        </div>
-      </section>
-
-      {/* =========================================================================
-          S06 — PATIENT-CENTRED ORTHOPAEDIC CARE
-          ========================================================================= */}
-      <section className="py-16 lg:py-24 bg-brand-light/40 border-t border-brand-border text-left">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="max-w-3xl space-y-3 mb-14">
-            <span className="text-xs font-bold uppercase tracking-wider text-brand-teal bg-white border border-brand-border px-3 py-1 rounded-full">
-              Clinical Approach
-            </span>
-            {/* H2 */}
-            <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-bold font-heading text-brand-deep leading-[1.25]">
-              Personalised Orthopaedic Care for Your Joint Health
-            </h2>
-            <div className="space-y-3 text-slate-700 text-sm sm:text-base leading-[1.7]">
-              <p>
-                Every patient's orthopaedic condition is different. Understanding the cause of pain, the extent of joint damage and the impact on daily activities is essential when considering treatment options.
-              </p>
-              <p>
-                Prof. Dr. Mumraiz Naqshband focuses on individualised treatment planning, helping patients understand their diagnosis and the options available to them.
-              </p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            
-            {/* H3: Comprehensive Clinical Assessment */}
-            <div className="bg-white rounded-2xl p-6 border border-brand-border shadow-card">
-              <h3 className="font-heading font-semibold text-lg text-brand-deep mb-2">
-                Comprehensive Clinical Assessment
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                A detailed consultation helps identify symptoms, functional limitations and possible causes of joint pain or injury.
-              </p>
-            </div>
-
-            {/* H3: Clear Treatment Discussions */}
-            <div className="bg-white rounded-2xl p-6 border border-brand-border shadow-card">
-              <h3 className="font-heading font-semibold text-lg text-brand-deep mb-2">
-                Clear Treatment Discussions
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Patients are provided with information about relevant treatment options, including potential benefits, risks and alternatives.
-              </p>
-            </div>
-
-            {/* H3: Surgical and Non-Surgical Options */}
-            <div className="bg-white rounded-2xl p-6 border border-brand-border shadow-card">
-              <h3 className="font-heading font-semibold text-lg text-brand-deep mb-2">
-                Surgical and Non-Surgical Options
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Not every orthopaedic condition requires surgery. Recommendations depend on the diagnosis, severity of symptoms and individual circumstances.
-              </p>
-            </div>
-
-            {/* H3: Recovery and Follow-Up Planning */}
-            <div className="bg-white rounded-2xl p-6 border border-brand-border shadow-card">
-              <h3 className="font-heading font-semibold text-lg text-brand-deep mb-2">
-                Recovery and Follow-Up Planning
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                When surgery is recommended, recovery expectations, rehabilitation needs and follow-up arrangements are discussed as part of treatment planning.
-              </p>
-            </div>
-
-          </div>
-
-          <div className="mt-10 text-left">
-            <a
-              href="https://wa.me/923214175761"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-brand-teal hover:bg-brand-tealHover text-white px-6 py-3 rounded-xl font-semibold text-xs sm:text-sm transition shadow-md"
-            >
-              <WhatsAppIcon className="w-4 h-4" />
-              <span>Schedule an Orthopaedic Consultation</span>
-            </a>
-          </div>
-
-        </div>
-      </section>
-
-      {/* =========================================================================
-          S07 — CONDITIONS WE ASSESS AND TREAT
-          ========================================================================= */}
-      <section className="py-16 lg:py-24 bg-white text-left border-t border-brand-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="max-w-3xl space-y-3 mb-14">
-            <span className="text-xs font-bold uppercase tracking-wider text-brand-teal bg-teal-50 px-3 py-1 rounded-full border border-teal-100">
-              Conditions & Symptoms
-            </span>
-            {/* H2 */}
-            <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-bold font-heading text-brand-deep leading-[1.25]">
-              Common Orthopaedic Conditions & Joint Problems
-            </h2>
-            <p className="text-slate-700 text-sm sm:text-base leading-[1.7]">
-              Orthopaedic conditions can affect movement, comfort and the ability to perform everyday activities. Early assessment can help identify the cause of symptoms and guide appropriate treatment.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            
-            {/* Condition 1: Knee Pain and Osteoarthritis */}
-            <div className="p-6 rounded-2xl bg-slate-50 border border-brand-border flex flex-col justify-between">
-              <div>
-                <h3 className="font-heading font-semibold text-lg text-brand-deep mb-2">
-                  Knee Pain and Osteoarthritis
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
-                  Knee osteoarthritis may cause pain, stiffness, swelling and difficulty walking or climbing stairs. Treatment depends on the severity of symptoms and joint changes.
-                </p>
-              </div>
-              <Link
-                to="/knee-osteoarthritis-treatment/"
-                className="text-xs font-semibold text-brand-blue hover:text-brand-deep inline-flex items-center gap-1 mt-auto"
-              >
-                <span>Knee Osteoarthritis Treatment</span>
-                <ChevronRight className="w-3.5 h-3.5" />
-              </Link>
-            </div>
-
-            {/* Condition 2: Hip Pain and Joint Degeneration */}
-            <div className="p-6 rounded-2xl bg-slate-50 border border-brand-border flex flex-col justify-between">
-              <div>
-                <h3 className="font-heading font-semibold text-lg text-brand-deep mb-2">
-                  Hip Pain and Joint Degeneration
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
-                  Hip disorders may cause pain around the groin, thigh or buttock and can restrict mobility. Assessment helps determine the underlying cause and suitable management options.
-                </p>
-              </div>
-              <Link
-                to="/hip-joint-disorders/"
-                className="text-xs font-semibold text-brand-blue hover:text-brand-deep inline-flex items-center gap-1 mt-auto"
-              >
-                <span>Hip Joint Disorders</span>
-                <ChevronRight className="w-3.5 h-3.5" />
-              </Link>
-            </div>
-
-            {/* Condition 3: Sports-Related Ligament and Meniscus Injuries */}
-            <div className="p-6 rounded-2xl bg-slate-50 border border-brand-border flex flex-col justify-between">
-              <div>
-                <h3 className="font-heading font-semibold text-lg text-brand-deep mb-2">
-                  Sports-Related Ligament and Meniscus Injuries
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
-                  Ligament and meniscus injuries may occur during sports or physical activity and can lead to pain, swelling, instability or restricted movement.
-                </p>
-              </div>
-              <Link
-                to="/sports-injury-surgery/"
-                className="text-xs font-semibold text-brand-blue hover:text-brand-deep inline-flex items-center gap-1 mt-auto"
-              >
-                <span>Sports Injury Surgery</span>
-                <ChevronRight className="w-3.5 h-3.5" />
-              </Link>
-            </div>
-
-            {/* Condition 4: Shoulder Pain and Instability */}
-            <div className="p-6 rounded-2xl bg-slate-50 border border-brand-border flex flex-col justify-between">
-              <div>
-                <h3 className="font-heading font-semibold text-lg text-brand-deep mb-2">
-                  Shoulder Pain and Instability
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
-                  Shoulder symptoms may arise from rotator cuff injuries, instability or other joint and soft tissue conditions.
-                </p>
-              </div>
-              <Link
-                to="/shoulder-joint-disorders/"
-                className="text-xs font-semibold text-brand-blue hover:text-brand-deep inline-flex items-center gap-1 mt-auto"
-              >
-                <span>Shoulder & Joint Disorders</span>
-                <ChevronRight className="w-3.5 h-3.5" />
-              </Link>
-            </div>
-
-            {/* Condition 5: Fractures and Traumatic Injuries */}
-            <div className="p-6 rounded-2xl bg-slate-50 border border-brand-border flex flex-col justify-between">
-              <div>
-                <h3 className="font-heading font-semibold text-lg text-brand-deep mb-2">
-                  Fractures and Traumatic Injuries
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
-                  Fractures and joint injuries require appropriate assessment to determine whether immobilisation, rehabilitation or surgical management is needed.
-                </p>
-              </div>
-              <Link
-                to="/fracture-trauma-surgery/"
-                className="text-xs font-semibold text-brand-blue hover:text-brand-deep inline-flex items-center gap-1 mt-auto"
-              >
-                <span>Fracture & Trauma Surgery</span>
-                <ChevronRight className="w-3.5 h-3.5" />
-              </Link>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-      {/* =========================================================================
-          S08 — PATIENT RESULTS & SURGICAL OUTCOMES
-          ========================================================================= */}
-      <section className="py-16 lg:py-20 bg-slate-50 border-t border-brand-border text-left">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="max-w-3xl space-y-3 mb-10">
-            <span className="text-xs font-bold uppercase tracking-wider text-brand-teal bg-white border border-brand-border px-3 py-1 rounded-full">
-              Educational Case Reviews
-            </span>
-            {/* H2 */}
-            <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-bold font-heading text-brand-deep leading-[1.25]">
-              Patient Results — Before & After Surgery
-            </h2>
-            <div className="space-y-3 text-slate-700 text-sm sm:text-base leading-[1.7]">
-              <p>
-                Understanding the experiences of patients who have undergone orthopaedic treatment can help others learn more about the treatment journey.
-              </p>
-              <p>
-                Our patient results section is intended to present selected, appropriately consented cases and educational information about orthopaedic procedures, recovery and follow-up care.
-              </p>
-              <p className="text-xs sm:text-sm text-slate-500 italic">
-                Individual outcomes vary depending on the patient's diagnosis, general health, procedure and rehabilitation.
-              </p>
-            </div>
-          </div>
-
-          <div className="pt-2">
-            <Link
-              to="/patient-results-before-after-surgery/"
-              className="inline-flex items-center gap-2 bg-brand-light hover:bg-brand-blue text-brand-blue hover:text-white px-6 py-3 rounded-xl font-semibold text-xs sm:text-sm transition-colors border border-brand-border"
-            >
-              <span>View Patient Results</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-
         </div>
       </section>
 

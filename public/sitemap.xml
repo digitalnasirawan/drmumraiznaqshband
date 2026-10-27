@@ -1,10 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <!-- Core Website Pages -->
   <url>
     <loc>https://drmumraiznaqshband.com/</loc>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
+    <image:image>
+      <image:loc>https://drmumraiznaqshband.com/images/services/cori-robotic-knee-replacement-lahore.webp</image:loc>
+      <image:title>CORI Robotic Knee Replacement Surgery in Lahore</image:title>
+      <image:caption>CORI robotic-assisted knee replacement and joint reconstruction in Lahore.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://drmumraiznaqshband.com/images/services/hip-replacement-surgery-lahore.webp</image:loc>
+      <image:title>Hip Replacement Surgery in Lahore</image:title>
+      <image:caption>Hip replacement surgery for suitable patients with damaged hip joints.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://drmumraiznaqshband.com/images/services/sports-injury-surgery-lahore.webp</image:loc>
+      <image:title>Sports Injury Surgery in Lahore</image:title>
+      <image:caption>Assessment and surgical treatment of selected sports-related knee injuries.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://drmumraiznaqshband.com/images/services/arthroscopic-minimally-invasive-surgery-lahore.webp</image:loc>
+      <image:title>Arthroscopic Surgery in Lahore</image:title>
+      <image:caption>Arthroscopic procedures use a small camera and specialised instruments to treat selected joint conditions.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://drmumraiznaqshband.com/images/services/shoulder-joint-disorders-lahore.webp</image:loc>
+      <image:title>Shoulder &amp; Joint Disorders Treatment in Lahore</image:title>
+      <image:caption>Assessment and treatment of shoulder injuries, rotator cuff problems and joint disorders.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://drmumraiznaqshband.com/images/services/orthopaedic-trauma-fracture-surgery-lahore.webp</image:loc>
+      <image:title>Orthopaedic Trauma &amp; Fracture Surgery in Lahore</image:title>
+      <image:caption>Orthopaedic fracture fixation and trauma treatment in Lahore.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://drmumraiznaqshband.com/images/services/arthritis-joint-pain-management-lahore.webp</image:loc>
+      <image:title>Arthritis &amp; Joint Pain Treatment in Lahore</image:title>
+      <image:caption>Arthritis and joint pain assessment, including knee osteoarthritis treatment options.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://drmumraiznaqshband.com/about/</loc>
