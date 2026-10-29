@@ -4,7 +4,6 @@ import {
   MapPin, Shield, AlertTriangle, Sparkles, Activity, Cpu, 
   Layers, CheckCircle, HelpCircle, Building2, Clock, Award
 } from 'lucide-react';
-import Breadcrumb from '../components/Breadcrumb';
 import { usePageSeo } from '../utils/seo';
 import { Link } from '../utils/navigation';
 import { WhatsAppIcon } from '../components/SocialIcons';
@@ -48,8 +47,7 @@ export default function ServicesMasterPage({ onOpenAppointment }) {
   return (
     <div className="bg-white text-brand-dark">
       {/* Breadcrumb Trail */}
-      <Breadcrumb items={[{ label: "Services", url: "/services/" }]} />
-
+      
       {/* =========================================================================
           S01 — HERO SECTION
           ========================================================================= */}
@@ -85,22 +83,30 @@ export default function ServicesMasterPage({ onOpenAppointment }) {
               </div>
 
               {/* Primary & Secondary CTAs */}
-              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4">
                 <a
-                  href="https://wa.me/923214175761"
+                  href="https://wa.me/923214175761?text=Hello%20Prof.%20Dr.%20Mumraiz%20Naqshband's%20clinic%2C%0A%0AI%20would%20like%20to%20book%20an%20orthopaedic%20consultation%20at%20BNI%20Lahore.%0APlease%20share%20available%20consultation%20timings."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-brand-teal hover:bg-brand-tealHover text-white px-7 py-3.5 rounded-xl font-semibold text-sm sm:text-base shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2"
+                  className="bg-emerald-600 hover:bg-emerald-700 text-white px-7 py-3.5 rounded-xl font-semibold text-sm sm:text-base shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2"
                 >
                   <WhatsAppIcon className="w-4 h-4" />
-                  <span>Book an Appointment</span>
+                  <span>Book on WhatsApp</span>
                 </a>
+
+                <button
+                  onClick={() => onOpenAppointment && onOpenAppointment()}
+                  className="bg-brand-teal hover:bg-brand-tealHover text-white px-6 py-3.5 rounded-xl font-semibold text-sm sm:text-base shadow-md transition-all flex items-center justify-center gap-2"
+                >
+                  <Calendar className="w-4 h-4" />
+                  <span>Schedule Appointment</span>
+                </button>
 
                 <a
                   href="#orthopaedic-services"
-                  className="border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white px-6 py-3.5 rounded-xl font-semibold text-sm sm:text-base transition-all flex items-center justify-center gap-2"
+                  className="border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white px-5 py-3.5 rounded-xl font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-1.5"
                 >
-                  <span>Explore Our Services</span>
+                  <span>All Services</span>
                   <ChevronRight className="w-4 h-4" />
                 </a>
               </div>

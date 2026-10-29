@@ -4,7 +4,6 @@ import {
   Clock, ArrowRight, Sparkles, MapPin, Phone, ExternalLink,
   Cpu, Activity, Crosshair, Layers, Bone, HeartPulse, ChevronRight
 } from 'lucide-react';
-import Breadcrumb from '../components/Breadcrumb';
 import { usePageSeo } from '../utils/seo';
 import { Link } from '../utils/navigation';
 import { DOCTOR_INFO } from '../data/siteData';
@@ -22,8 +21,7 @@ export default function AboutPage({ onOpenAppointment }) {
 
   return (
     <div className="bg-white text-brand-dark">
-      <Breadcrumb items={[{ label: "About", url: "/about/" }]} />
-
+      
       {/* =========================================================================
           S01 — HERO SECTION
           ========================================================================= */}

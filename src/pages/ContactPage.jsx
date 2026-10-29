@@ -3,7 +3,6 @@ import {
   Phone, Mail, MapPin, Clock, 
   Calendar, CheckCircle, Send, ExternalLink 
 } from 'lucide-react';
-import Breadcrumb from '../components/Breadcrumb';
 import { usePageSeo } from '../utils/seo';
 import { DOCTOR_INFO, CLINIC_LOCATIONS } from '../data/siteData';
 import { WhatsAppIcon } from '../components/SocialIcons';
@@ -39,8 +38,7 @@ export default function ContactPage({ onOpenAppointment }) {
 
   return (
     <div className="bg-white">
-      <Breadcrumb items={[{ label: "Contact", url: "/contact/" }]} />
-
+      
       {/* Hero Header */}
       <section className="bg-gradient-to-b from-brand-deep to-[#0e2c47] text-white py-14 lg:py-20 text-left">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -5,7 +5,6 @@ import {
   Layers, CheckCircle, HelpCircle, Building2, Clock, Award,
   FileText, Stethoscope, AlertCircle, Scale, ShieldAlert
 } from 'lucide-react';
-import Breadcrumb from '../components/Breadcrumb';
 import { usePageSeo } from '../utils/seo';
 import { Link } from '../utils/navigation';
 import { WhatsAppIcon } from '../components/SocialIcons';
@@ -118,14 +117,7 @@ export default function PartialKneeReplacementPage({ onOpenAppointment }) {
   return (
     <div className="bg-white text-brand-dark">
       {/* Breadcrumb Trail */}
-      <Breadcrumb 
-        items={[
-          { label: "Services", url: "/services/" },
-          { label: "Robotic Knee Replacement", url: "/robotic-knee-replacement/" },
-          { label: "Partial Knee Replacement", url: "/partial-knee-replacement/" }
-        ]} 
-      />
-
+      
       {/* =========================================================================
           S01 — HERO SECTION
           ========================================================================= */}
@@ -197,21 +189,30 @@ export default function PartialKneeReplacementPage({ onOpenAppointment }) {
               </div>
 
               {/* CTAs */}
-              <div className="flex flex-wrap gap-4 pt-4">
+              <div className="flex flex-wrap gap-3.5 pt-4">
                 <a
-                  href="https://wa.me/923214175761"
+                  href="https://wa.me/923214175761?text=Hello%20Prof.%20Dr.%20Mumraiz%20Naqshband's%20clinic%2C%0A%0AI%20would%20like%20to%20book%20a%20Partial%20Knee%20Replacement%20consultation%20at%20BNI%20Lahore.%0APlease%20share%20available%20consultation%20timings."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-brand-teal text-white font-semibold text-base shadow-md hover:bg-brand-teal/90 transition-all"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm sm:text-base shadow-md transition-all"
                 >
-                  <WhatsAppIcon className="w-5 h-5 fill-current" />
-                  <span>Book a Knee Consultation</span>
+                  <WhatsAppIcon className="w-4 h-4 text-white" />
+                  <span>Book on WhatsApp</span>
                 </a>
+
+                <button
+                  onClick={() => onOpenAppointment && onOpenAppointment("Partial Knee Replacement")}
+                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-brand-teal hover:bg-brand-tealHover text-white font-semibold text-sm sm:text-base shadow-md transition-all"
+                >
+                  <Calendar className="w-4 h-4" />
+                  <span>Schedule Appointment</span>
+                </button>
+
                 <a
                   href="#what-is-partial-knee-replacement"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-brand-light text-brand-blue font-semibold text-base border border-brand-border hover:bg-white hover:border-brand-teal transition-all"
+                  className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-brand-light text-brand-blue font-semibold text-xs sm:text-sm border border-brand-border hover:bg-white hover:border-brand-teal transition-all"
                 >
-                  <span>Learn About Partial Knee Replacement</span>
+                  <span>Learn More</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>

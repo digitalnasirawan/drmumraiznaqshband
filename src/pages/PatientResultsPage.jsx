@@ -1,6 +1,5 @@
 import React from 'react';
 import { Award, ShieldCheck, Activity, Calendar, ArrowRight, CheckCircle2 } from 'lucide-react';
-import Breadcrumb from '../components/Breadcrumb';
 import { usePageSeo } from '../utils/seo';
 import { Link } from '../utils/navigation';
 import { PATIENT_RESULTS, DOCTOR_INFO } from '../data/siteData';
@@ -14,8 +13,7 @@ export default function PatientResultsPage({ onOpenAppointment }) {
 
   return (
     <div className="bg-white">
-      <Breadcrumb items={[{ label: "Patient Results", url: "/patient-results-before-after-surgery/" }]} />
-
+      
       {/* Hero Header */}
       <section className="bg-gradient-to-b from-brand-deep to-[#0e2c47] text-white py-14 lg:py-20 text-left">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,5 +1,4 @@
 import React from 'react';
-import Breadcrumb from '../components/Breadcrumb';
 import { usePageSeo } from '../utils/seo';
 import { DOCTOR_INFO } from '../data/siteData';
 
@@ -92,8 +91,7 @@ export default function LegalPage({ type = 'privacy' }) {
 
   return (
     <div className="bg-white">
-      <Breadcrumb items={[{ label: title, url: canonicalUrl }]} />
-
+      
       <section className="bg-gradient-to-b from-brand-deep to-[#0e2c47] text-white py-12 text-left">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl sm:text-4xl font-extrabold font-heading text-white">

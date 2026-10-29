@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { HelpCircle, Search, ChevronDown, Calendar, Phone } from 'lucide-react';
-import Breadcrumb from '../components/Breadcrumb';
 import { usePageSeo } from '../utils/seo';
 import { FAQS, DOCTOR_INFO } from '../data/siteData';
 import { WhatsAppIcon } from '../components/SocialIcons';
@@ -34,8 +33,7 @@ export default function FaqsPage({ onOpenAppointment }) {
 
   return (
     <div className="bg-white">
-      <Breadcrumb items={[{ label: "FAQs", url: "/faqs/" }]} />
-
+      
       {/* Hero Header */}
       <section className="bg-gradient-to-b from-brand-deep to-[#0e2c47] text-white py-14 lg:py-20 text-left">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
