@@ -56,7 +56,7 @@ export default function HomePage({ onOpenAppointment }) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             {/* Left Content Column */}
-            <div className="lg:col-span-7 space-y-6">
+            <div className="lg:col-span-7 order-2 lg:order-1 space-y-6">
               
               {/* Eyebrow / Short Label */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-light border border-brand-border text-brand-blue text-xs font-semibold shadow-sm">
@@ -128,50 +128,16 @@ export default function HomePage({ onOpenAppointment }) {
 
             </div>
 
-            {/* Right Column: Approved Doctor Image */}
-            <div className="lg:col-span-5 relative">
-              <div className="relative mx-auto max-w-md bg-white rounded-3xl shadow-2xl border border-brand-border overflow-hidden">
-                <div className="relative h-[380px] sm:h-[430px] w-full overflow-hidden bg-slate-100">
+            {/* Right Column: Doctor Portrait Image (Shown before content on mobile, pure image without text or buttons) */}
+            <div className="lg:col-span-5 order-1 lg:order-2 relative">
+              <div className="relative mx-auto max-w-sm sm:max-w-md bg-white rounded-3xl shadow-xl border border-brand-border overflow-hidden">
+                <div className="relative aspect-[4/5] sm:aspect-[3/4] w-full overflow-hidden bg-slate-100">
                   <img
                     src={DOCTOR_INFO.images.portrait}
                     alt="Prof. Dr. Mumraiz Naqshband, Consultant Orthopaedic Surgeon in Lahore."
                     className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
                     loading="eager"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-deep via-transparent to-transparent opacity-75"></div>
-                  
-                  <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-xl px-3.5 py-1.5 shadow-md flex items-center gap-2 border border-brand-border">
-                    <Award className="w-4 h-4 text-brand-teal" />
-                    <span className="text-xs font-bold text-brand-deep">20+ Years Experience</span>
-                  </div>
-
-                  <div className="absolute bottom-4 inset-x-4 text-white text-left">
-                    <div className="text-xs font-semibold text-emerald-300 uppercase tracking-wider mb-1">
-                      Consultant Orthopaedic Surgeon
-                    </div>
-                    <div className="text-xl font-bold font-heading text-white">
-                      Prof. Dr. Mumraiz Naqshband
-                    </div>
-                    <div className="text-xs text-white/80 mt-0.5">
-                      Professor of Orthopaedic Surgery at KEMU, Lahore
-                    </div>
-                  </div>
-                </div>
-
-                <div className="p-4 bg-brand-light/90 border-t border-brand-border flex items-center justify-between text-left">
-                  <div>
-                    <span className="text-[10px] text-slate-500 uppercase tracking-wider block font-semibold">Location</span>
-                    <span className="text-xs font-bold text-brand-deep">BNI - 18 Jail Rd, Shadman 1, Lahore</span>
-                  </div>
-                  <a
-                    href="https://wa.me/923214175761"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 bg-brand-teal hover:bg-brand-tealHover text-white text-xs font-semibold px-3 py-2 rounded-xl transition shadow-sm"
-                  >
-                    <WhatsAppIcon className="w-3.5 h-3.5" />
-                    <span>WhatsApp</span>
-                  </a>
                 </div>
               </div>
             </div>

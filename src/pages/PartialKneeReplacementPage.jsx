@@ -218,18 +218,15 @@ export default function PartialKneeReplacementPage({ onOpenAppointment }) {
               </div>
             </div>
 
-            {/* Right Media Column */}
-            <div className="lg:col-span-5">
-              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-brand-border bg-brand-light">
-                <img
-                  src="/assets/images/prof-dr-mumraiz-naqshband-portrait.jpg"
-                  alt="Prof. Dr. Mumraiz Naqshband, Consultant Orthopaedic Surgeon"
-                  className="w-full h-auto object-cover object-center max-h-[520px]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-deep/80 via-transparent to-transparent flex flex-col justify-end p-6 text-white text-left">
-                  <p className="text-xs uppercase font-bold tracking-wider text-brand-teal">Consultant Knee & Orthopaedic Surgeon</p>
-                  <p className="text-xl font-bold font-heading">Prof. Dr. Mumraiz Naqshband</p>
-                  <p className="text-xs text-white/80 mt-1">Specialist Unicompartmental & CORI Robotic-Assisted Knee Surgery</p>
+            {/* Right Media Column (Shown before content on mobile, pure image without text or buttons) */}
+            <div className="lg:col-span-5 order-1 lg:order-2">
+              <div className="relative mx-auto max-w-sm sm:max-w-md lg:max-w-none">
+                <div className="relative rounded-2xl overflow-hidden shadow-xl border border-brand-border bg-slate-100 aspect-[4/5] sm:aspect-[3/4]">
+                  <img
+                    src="/assets/images/prof-dr-mumraiz-naqshband-portrait.jpg"
+                    alt="Prof. Dr. Mumraiz Naqshband, Consultant Orthopaedic Surgeon"
+                    className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-700"
+                  />
                 </div>
               </div>
             </div>

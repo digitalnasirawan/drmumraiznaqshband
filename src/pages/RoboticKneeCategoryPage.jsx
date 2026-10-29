@@ -56,7 +56,7 @@ export default function RoboticKneeCategoryPage({ onOpenAppointment }) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             {/* Left Content Column */}
-            <div className="lg:col-span-7 space-y-6">
+            <div className="lg:col-span-7 order-2 lg:order-1 space-y-6">
               
               {/* Eyebrow */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-light border border-brand-border text-brand-blue text-xs font-semibold shadow-sm">
@@ -146,28 +146,15 @@ export default function RoboticKneeCategoryPage({ onOpenAppointment }) {
 
             </div>
 
-            {/* Right Hero Image Column */}
-            <div className="lg:col-span-5">
-              <div className="relative mx-auto max-w-md lg:max-w-none">
-                <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100 aspect-[4/5] sm:aspect-[3/4]">
+            {/* Right Hero Image Column (Shown before content on mobile, pure image without text or buttons) */}
+            <div className="lg:col-span-5 order-1 lg:order-2">
+              <div className="relative mx-auto max-w-sm sm:max-w-md lg:max-w-none">
+                <div className="relative rounded-3xl overflow-hidden shadow-xl border border-brand-border bg-slate-100 aspect-[4/5] sm:aspect-[3/4]">
                   <img
                     src="/assets/images/prof-dr-mumraiz-naqshband-clinical-rounds.jpg"
-                    alt="Prof. Dr. Mumraiz Naqshband with robotic-assisted knee replacement technology, if accurately shown."
-                    className="w-full h-full object-cover object-top"
+                    alt="Prof. Dr. Mumraiz Naqshband with robotic-assisted knee replacement technology."
+                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-deep/80 via-transparent to-transparent"></div>
-                  
-                  <div className="absolute bottom-5 left-5 right-5 text-white bg-brand-deep/85 backdrop-blur-md p-4 rounded-2xl border border-white/20">
-                    <div className="font-heading font-bold text-base sm:text-lg">
-                      Prof. Dr. Mumraiz Naqshband
-                    </div>
-                    <div className="text-xs text-brand-teal font-medium">
-                      Consultant Orthopaedic Surgeon & Robotic Specialist
-                    </div>
-                    <div className="text-[11px] text-white/80 mt-1">
-                      CORI Robotic Knee Replacement | BNI Lahore
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
