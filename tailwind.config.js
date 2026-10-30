@@ -19,8 +19,9 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        heading: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+        sans: ['var(--font-body)', 'Jost', 'system-ui', 'sans-serif'],
+        body: ['var(--font-body)', 'Jost', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-heading)', 'Figtree', 'sans-serif'],
       },
       boxShadow: {
         'card': '0 4px 20px -2px rgba(18, 59, 93, 0.08), 0 2px 6px -1px rgba(18, 59, 93, 0.04)',

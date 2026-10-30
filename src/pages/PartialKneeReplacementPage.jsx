@@ -1061,7 +1061,7 @@ export default function PartialKneeReplacementPage({ onOpenAppointment }) {
           <div className="p-6 rounded-xl bg-red-50 border border-red-200 text-red-950 space-y-3 mb-6 max-w-4xl">
             <div className="flex items-center gap-2 font-bold text-base text-red-900">
               <ShieldAlert className="w-5 h-5 text-red-600" />
-              <h3>When to Seek Urgent Medical Attention</h3>
+              <h3 className="font-heading">When to Seek Urgent Medical Attention</h3>
             </div>
             <p className="text-sm leading-relaxed text-red-900/90">
               After surgery, urgent medical assessment is needed for symptoms such as chest pain, sudden breathlessness, severe new leg swelling or significant bleeding.
@@ -1178,7 +1178,7 @@ export default function PartialKneeReplacementPage({ onOpenAppointment }) {
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
                 <div className="p-4 rounded-xl bg-white border border-brand-border/80 shadow-sm">
-                  <h3 className="text-xs font-bold uppercase tracking-wider text-brand-muted mb-2">Qualifications</h3>
+                  <h3 className="text-xs font-bold font-heading uppercase tracking-wider text-brand-muted mb-2">Qualifications</h3>
                   <p className="text-xs sm:text-sm text-brand-dark font-medium leading-relaxed">
                     M.B.C.H.B (New Zealand)<br />
                     F.R.A.C.S (Ortho) (Australia)<br />
@@ -1187,14 +1187,14 @@ export default function PartialKneeReplacementPage({ onOpenAppointment }) {
                 </div>
 
                 <div className="p-4 rounded-xl bg-white border border-brand-border/80 shadow-sm">
-                  <h3 className="text-xs font-bold uppercase tracking-wider text-brand-muted mb-2">Professional Role</h3>
+                  <h3 className="text-xs font-bold font-heading uppercase tracking-wider text-brand-muted mb-2">Professional Role</h3>
                   <p className="text-xs sm:text-sm text-brand-dark font-medium leading-relaxed">
                     Professor and Consultant Orthopaedic Surgeon.
                   </p>
                 </div>
 
                 <div className="p-4 rounded-xl bg-white border border-brand-border/80 shadow-sm">
-                  <h3 className="text-xs font-bold uppercase tracking-wider text-brand-muted mb-2">Specialist Interests</h3>
+                  <h3 className="text-xs font-bold font-heading uppercase tracking-wider text-brand-muted mb-2">Specialist Interests</h3>
                   <p className="text-xs sm:text-sm text-brand-dark font-medium leading-relaxed">
                     Knee replacement, robotic-assisted knee replacement using CORI, hip replacement, joint reconstruction and arthroscopic surgery.
                   </p>
@@ -1235,7 +1235,7 @@ export default function PartialKneeReplacementPage({ onOpenAppointment }) {
             <div className="p-6 sm:p-8 rounded-2xl bg-brand-light/30 border border-brand-border shadow-sm space-y-4">
               <div className="flex items-center gap-2 text-brand-deep font-bold font-heading text-lg sm:text-xl">
                 <Building2 className="w-5 h-5 text-brand-teal" />
-                <h3>Bashir NeuroSpine Institute (BNI)</h3>
+                <h3 className="font-heading">Bashir NeuroSpine Institute (BNI)</h3>
               </div>
               <p className="text-sm text-brand-dark/80 leading-relaxed">
                 <span className="font-semibold text-brand-dark">Address:</span> BNI - Bashir NeuroSpine Institute, 18 Jail Rd, Shadman 1 Shadman, Lahore, 54000, Pakistan.
@@ -1258,7 +1258,7 @@ export default function PartialKneeReplacementPage({ onOpenAppointment }) {
             <div className="p-6 sm:p-8 rounded-2xl bg-brand-light/30 border border-brand-border shadow-sm space-y-4">
               <div className="flex items-center gap-2 text-brand-deep font-bold font-heading text-lg sm:text-xl">
                 <Building2 className="w-5 h-5 text-brand-teal" />
-                <h3>Bahria International Hospitals</h3>
+                <h3 className="font-heading">Bahria International Hospitals</h3>
               </div>
               <p className="text-sm text-brand-dark/80 leading-relaxed">
                 Consultation schedules and clinic details can be confirmed through the appointment team.
